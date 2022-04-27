@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import proyecto2_progra2.User_Menu;
-
+import proyecto2_progra2.config;
 
 public class Write_Twit extends javax.swing.JPanel {
  int caracteres= 10;
@@ -27,7 +27,7 @@ public class Write_Twit extends javax.swing.JPanel {
     public Write_Twit(String user,User_Menu user_Menu) {
         initComponents();
         Listeners();
-        twits = new File("C:\\Users\\SkyWalker\\Documents\\NetBeansProjects\\Proyecto2_Progra2\\Data Center\\USUARIOS\\" +user + "\\twits.twc");
+        twits = new File(config.directory + "\\Proyecto2_Progra2\\Data Center\\USUARIOS\\" +user + "\\twits.twc");
         this.user_Menu = user_Menu;
         
         

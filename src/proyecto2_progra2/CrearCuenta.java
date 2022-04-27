@@ -19,10 +19,11 @@ import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import proyecto2_progra2.config;
 
 public class CrearCuenta extends javax.swing.JFrame {
-    File file  = new File("C:\\Users\\SkyWalker\\Documents\\NetBeansProjects\\Proyecto2_Progra2\\Data Center\\users.twc");
-    String ruta = "C:\\Users\\SkyWalker\\Documents\\NetBeansProjects\\Proyecto2_Progra2\\src\\Recursos_Proyecto\\default_image.jpg";
+    File file  = new File(config.directory + "\\Proyecto2_Progra2\\Data Center\\users.twc");
+    String ruta = config.directory + "\\Proyecto2_Progra2\\src\\Recursos_Proyecto\\default_image.jpg";
     Information information = new Information();
     RandomAccessFile randomAccessFile ;
  
@@ -358,13 +359,13 @@ public class CrearCuenta extends javax.swing.JFrame {
             randomAccessFile.writeBoolean(true);
             randomAccessFile.writeUTF(ruta);
              
-            File Directorio = new File("C:\\Users\\SkyWalker\\Documents\\NetBeansProjects\\Proyecto2_Progra2\\Data Center\\USUARIOS\\"+txtusuario.getText());
+            File Directorio = new File(config.directory +  "\\Proyecto2_Progra2\\Data Center\\USUARIOS\\"+txtusuario.getText());
             Directorio.mkdir();
-            File following = new File("C:\\Users\\SkyWalker\\Documents\\NetBeansProjects\\Proyecto2_Progra2\\Data Center\\USUARIOS\\"+txtusuario.getText()+"\\following.twc");
+            File following = new File(config.directory +  "\\Proyecto2_Progra2\\Data Center\\USUARIOS\\"+txtusuario.getText()+"\\following.twc");
             following.createNewFile();
-            File followers = new File("C:\\Users\\SkyWalker\\Documents\\NetBeansProjects\\Proyecto2_Progra2\\Data Center\\USUARIOS\\"+txtusuario.getText()+"\\followers.twc");
+            File followers = new File(config.directory +  "\\Proyecto2_Progra2\\Data Center\\USUARIOS\\"+txtusuario.getText()+"\\followers.twc");
             followers.createNewFile();
-            File twits = new File("C:\\Users\\SkyWalker\\Documents\\NetBeansProjects\\Proyecto2_Progra2\\Data Center\\USUARIOS\\"+txtusuario.getText()+"\\twits.twc");
+            File twits = new File(config.directory +  "\\Proyecto2_Progra2\\Data Center\\USUARIOS\\"+txtusuario.getText()+"\\twits.twc");
             twits.createNewFile();
             randomAccessFile.close();
         } catch (IOException ex) {

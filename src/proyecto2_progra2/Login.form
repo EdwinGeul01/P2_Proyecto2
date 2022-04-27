@@ -78,7 +78,6 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="doubleBuffered" type="boolean" value="true"/>
-                <Property name="opaque" type="boolean" value="false"/>
                 <Property name="selectedTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
@@ -206,7 +205,6 @@
                     </MatteColorBorder>
                   </Border>
                 </Property>
-                <Property name="opaque" type="boolean" value="false"/>
                 <Property name="selectedTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>

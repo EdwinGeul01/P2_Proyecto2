@@ -27,11 +27,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import proyecto2_progra2.config;
 
 public class User_Menu extends javax.swing.JFrame {
 
     public Information information = new Information();
-    File file = new File("C:\\Users\\SkyWalker\\Documents\\NetBeansProjects\\Proyecto2_Progra2\\Data Center\\users.twc");
+    File file = new File(config.directory + "\\Proyecto2_Progra2\\Data Center\\users.twc");
 
     File twits;
     RandomAccessFile Twits;
@@ -61,7 +62,7 @@ public class User_Menu extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, ex);
         }
 
-        twits = new File("C:\\Users\\SkyWalker\\Documents\\NetBeansProjects\\Proyecto2_Progra2\\Data Center\\USUARIOS\\" + Usuario + "\\twits.twc");
+        twits = new File(config.directory + "\\Proyecto2_Progra2\\Data Center\\USUARIOS\\" + Usuario + "\\twits.twc");
 
         try {
             Twits = new RandomAccessFile(twits, "rw");
@@ -846,7 +847,7 @@ public class User_Menu extends javax.swing.JFrame {
         
 
         if (OptMenu.getY() == -200) {
-            menuButton.setIcon(new ImageIcon("C:\\Users\\SkyWalker\\Documents\\NetBeansProjects\\Proyecto2_Progra2\\src\\Recursos_Proyecto\\CmenuR2.png"));
+            menuButton.setIcon(new ImageIcon(config.directory + "\\Proyecto2_Progra2\\src\\Recursos_Proyecto\\CmenuR2.png"));
             Timer t = new Timer();
             TimerTask tt = new TimerTask() {
                 @Override
@@ -864,7 +865,7 @@ public class User_Menu extends javax.swing.JFrame {
             };
             t.schedule(tt, 100, 10);
         } else if (OptMenu.getY() == 60) {
-            menuButton.setIcon(new ImageIcon("C:\\Users\\SkyWalker\\Documents\\NetBeansProjects\\Proyecto2_Progra2\\src\\Recursos_Proyecto\\CmenuR.png"));
+            menuButton.setIcon(new ImageIcon(config.directory + "\\Proyecto2_Progra2\\src\\Recursos_Proyecto\\CmenuR.png"));
             Timer t = new Timer();
             TimerTask tt = new TimerTask() {
                 @Override

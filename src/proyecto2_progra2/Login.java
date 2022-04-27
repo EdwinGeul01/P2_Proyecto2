@@ -19,11 +19,12 @@ import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import proyecto2_progra2.config;
 
 public class Login extends javax.swing.JFrame {
     Information information = new Information();
-    File file  = new File("C:\\Users\\SkyWalker\\Documents\\NetBeansProjects\\Proyecto2_Progra2\\Data Center\\users.twc");
-    String ruta = "C:\\Users\\SkyWalker\\Documents\\NetBeansProjects\\Proyecto2_Progra2\\src\\Recursos_Proyecto\\default_image.jpg";
+    File file  = new File (config.directory + "\\Proyecto2_Progra2\\Data Center\\users.twc");
+    String ruta = config.directory +  "\\Proyecto2_Progra2\\src\\Recursos_Proyecto\\default_image.jpg";
     RandomAccessFile randomAccessFile ;
 
     public Login() {

@@ -14,10 +14,11 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import proyecto2_progra2.config;
 
 
 public class Information {
-    File fileUser = new File("C:\\Users\\SkyWalker\\Documents\\NetBeansProjects\\Proyecto2_Progra2\\Data Center\\users.twc");
+    File fileUser = new File(config.directory + "\\Proyecto2_Progra2\\Data Center\\users.twc");
    public ArrayList<Usuario> Usuarios = new ArrayList<>();
 
     public Information() {
@@ -57,7 +58,7 @@ public class Information {
         
         //Cargar twits
         for (int i = 0; i < Usuarios.size(); i++) {
-            File twits = new File("C:\\Users\\SkyWalker\\Documents\\NetBeansProjects\\Proyecto2_Progra2\\Data Center\\USUARIOS\\"+Usuarios.get(i).getUser()+"\\twits.twc");
+            File twits = new File(config.directory + "\\Proyecto2_Progra2\\Data Center\\USUARIOS\\"+Usuarios.get(i).getUser()+"\\twits.twc");
             RandomAccessFile ReadTwits = new RandomAccessFile(twits, "rw");
             
             while (ReadTwits.getFilePointer() < ReadTwits.length()) {                
@@ -91,7 +92,7 @@ public class Information {
         //Cargar Seguidores 
         for (int i = 0; i < Usuarios.size(); i++) {
 
-            File followers = new File("C:\\Users\\SkyWalker\\Documents\\NetBeansProjects\\Proyecto2_Progra2\\Data Center\\USUARIOS\\"+Usuarios.get(i).getUser()+"\\followers.twc");
+            File followers = new File(config.directory + "\\Proyecto2_Progra2\\Data Center\\USUARIOS\\"+Usuarios.get(i).getUser()+"\\followers.twc");
             RandomAccessFile ReadFollowers = new RandomAccessFile(followers, "rw");
             
             while (ReadFollowers.getFilePointer() <ReadFollowers.length()) {                
@@ -122,7 +123,7 @@ public class Information {
         
         for (int i = 0; i < Usuarios.size(); i++) {
 
-            File followers = new File("C:\\Users\\SkyWalker\\Documents\\NetBeansProjects\\Proyecto2_Progra2\\Data Center\\USUARIOS\\"+Usuarios.get(i).getUser()+"\\following.twc");
+            File followers = new File(config.directory + "\\Proyecto2_Progra2\\Data Center\\USUARIOS\\"+Usuarios.get(i).getUser()+"\\following.twc");
             RandomAccessFile ReadFollowing = new RandomAccessFile(followers, "rw");
             
             while (ReadFollowing.getFilePointer() < ReadFollowing.length()) {                
@@ -157,7 +158,7 @@ public class Information {
         for (int i = 0; i < Usuarios.size(); i++) {
         
             
-             File followers = new File("C:\\Users\\SkyWalker\\Documents\\NetBeansProjects\\Proyecto2_Progra2\\Data Center\\USUARIOS\\"+Usuarios.get(i).getUser()+"\\followers.twc");
+             File followers = new File(config.directory + "\\Proyecto2_Progra2\\Data Center\\USUARIOS\\"+Usuarios.get(i).getUser()+"\\followers.twc");
         try {
             RandomAccessFile SobreescrituraFollowers = new  RandomAccessFile(followers, "rw");
             
@@ -184,7 +185,7 @@ public class Information {
         for (int i = 0; i < Usuarios.size(); i++) {
         
             
-             File following = new File("C:\\Users\\SkyWalker\\Documents\\NetBeansProjects\\Proyecto2_Progra2\\Data Center\\USUARIOS\\"+Usuarios.get(i).getUser()+"\\following.twc");
+             File following = new File(config.directory + "\\Proyecto2_Progra2\\Data Center\\USUARIOS\\"+Usuarios.get(i).getUser()+"\\following.twc");
         try {
             RandomAccessFile SobreescrituraFollowing = new  RandomAccessFile(following, "rw");
             
@@ -221,7 +222,7 @@ public class Information {
     
     
     public void SobreEscribirEstado() throws FileNotFoundException, IOException{
-                     File Users = new File("C:\\Users\\SkyWalker\\Documents\\NetBeansProjects\\Proyecto2_Progra2\\Data Center\\users.twc");
+                     File Users = new File(config.directory + "\\Proyecto2_Progra2\\Data Center\\users.twc");
 
                     RandomAccessFile SobreescrituraUsers = new  RandomAccessFile(Users, "rw");
                 SobreescrituraUsers.seek(0);
